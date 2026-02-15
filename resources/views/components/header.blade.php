@@ -74,8 +74,8 @@
                             <div class="d-flex align-items-center">
                                 <img src="assets/images/avatar/1.png" alt="user-image" class="img-fluid user-avtar">
                                 <div>
-                                    <h6 class="text-dark mb-0">{{ Auth::user()->name }}</h6>
-                                    <span class="fs-12 fw-medium text-muted">{{ Auth::user()->email }}</span>
+                                    {{-- <h6 class="text-dark mb-0">{{ Auth::user()->name }}</h6> --}}
+                                    {{-- <span class="fs-12 fw-medium text-muted">{{ Auth::user()->email }}</span> --}}
                                 </div>
                             </div>
                         </div>

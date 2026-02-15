@@ -50,31 +50,34 @@
     <x-theme />
     <x-footer />
 
-    <!-- Vendors JS (harus di atas) -->
-    <script src="{{ asset('assets/vendors/js/vendors.min.js') }}"></script>
-    <script src="{{ asset('assets/vendors/js/tagify.min.js') }}"></script>
-    <script src="{{ asset('assets/vendors/js/tagify-data.min.js') }}"></script>
-    <script src="{{ asset('assets/vendors/js/quill.min.js') }}"></script>
-    <script src="{{ asset('assets/vendors/js/select2.min.js') }}"></script>
-    <script src="{{ asset('assets/vendors/js/select2-active.min.js') }}"></script>
-    <script src="{{ asset('assets/vendors/js/datepicker.min.js') }}"></script>
+    <script src="assets/vendors/js/vendors.min.js"></script>
+    <!-- vendors.min.js {always must need to be top} -->
+    <script src="assets/vendors/js/tagify.min.js"></script>
+    <script src="assets/vendors/js/tagify-data.min.js"></script>
+    <script src="assets/vendors/js/quill.min.js"></script>
+    <script src="assets/vendors/js/select2.min.js"></script>
+    <script src="assets/vendors/js/select2-active.min.js"></script>
+    <script src="assets/vendors/js/datepicker.min.js"></script>
 
-    <!-- SweetAlert2 JS -->
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.all.min.js"></script>
+    <!--! END: Vendors JS !-->
+    <!--! BEGIN: Apps Init  !-->
+    <script src="assets/js/common-init.min.js"></script>
+    <script src="assets/js/proposal-create-init.min.js"></script>
+    <!--! END: Apps Init !-->
+    <!--! BEGIN: Theme Customizer  !-->
+    <script src="assets/js/theme-customizer-init.min.js"></script>
+    <!--! END: Theme Customizer !-->
 
-    <!-- Toastr JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
-
-    <!-- Apps Init -->
-    <script src="{{ asset('assets/js/common-init.min.js') }}"></script>
-    <script src="{{ asset('assets/js/proposal-create-init.min.js') }}"></script>
-
-    <!-- Theme Customizer -->
-    <script src="{{ asset('assets/js/theme-customizer-init.min.js') }}"></script>
-
-    {{-- Grafik JS --}}
-    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
-
+    <script src="assets/vendors/js/vendors.min.js"></script>
+    <!-- vendors.min.js {always must need to be top} -->
+    <script src="assets/vendors/js/apexcharts.min.js"></script>
+    <!--! END: Vendors JS !-->
+    <!--! BEGIN: Apps Init  !-->
+    <script src="assets/js/common-init.min.js"></script>
+    <script src="assets/js/widgets-charts-init.min.js"></script>
+    <!--! END: Apps Init !-->
+    <!--! BEGIN: Theme Customizer  !-->
+    <script src="assets/js/theme-customizer-init.min.js"></script>
     <script>
         // Konfigurasi Toastr
         toastr.options = {

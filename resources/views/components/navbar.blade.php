@@ -6,76 +6,128 @@
             </a>
         </div>
 
-        <div class="navbar-content">
-            <ul class="nxl-navbar">
-
-                {{-- Caption --}}
-                <li class="nxl-item nxl-caption">
-                    <label>Menu Utama</label>
-                </li>
-
-                {{-- Dashboard --}}
-                <li class="nxl-item">
-                    <a href="#" class="nxl-link">
-                        <span class="nxl-micon"><i class="feather-home"></i></span>
-                        <span class="nxl-mtext">Dashboard</span>
+        <nav class="nxl-navigation">
+            <div class="navbar-wrapper">
+                <div class="m-header">
+                    <a href="dashboard.html" class="b-brand">
+                        <h3>SIM SMP</h3>
                     </a>
-                </li>
+                </div>
 
-                {{-- Manajemen Siswa --}}
-                <li class="nxl-item">
-                    <a href="#" class="nxl-link">
-                        <span class="nxl-micon"><i class="feather-user"></i></span>
-                        <span class="nxl-mtext">Manajemen Siswa</span>
-                    </a>
-                </li>
+                <div class="navbar-content">
+                    <ul class="nxl-navbar">
 
-                {{-- Manajemen Guru --}}
-                <li class="nxl-item">
-                    <a href="#" class="nxl-link">
-                        <span class="nxl-micon"><i class="feather-users"></i></span>
-                        <span class="nxl-mtext">Manajemen Guru</span>
-                    </a>
-                </li>
+                        <!-- ================= DASHBOARD ================= -->
+                        <li class="nxl-item nxl-caption">
+                            <label>Dashboard</label>
+                        </li>
 
-                {{-- Manajemen Kelas --}}
-                <li class="nxl-item">
-                    <a href="#" class="nxl-link">
-                        <span class="nxl-micon"><i class="feather-layers"></i></span>
-                        <span class="nxl-mtext">Manajemen Kelas</span>
-                    </a>
-                </li>
+                        <li class="nxl-item">
+                            <a href="dashboard.html" class="nxl-link">
+                                <span class="nxl-micon"><i class="feather-home"></i></span>
+                                <span class="nxl-mtext">Dashboard Utama</span>
+                            </a>
+                        </li>
 
-                {{-- Mata Pelajaran --}}
-                <li class="nxl-item">
-                    <a href="#" class="nxl-link">
-                        <span class="nxl-micon"><i class="feather-book"></i></span>
-                        <span class="nxl-mtext">Mata Pelajaran</span>
-                    </a>
-                </li>
 
-                {{-- Nilai (Dropdown karena biasanya banyak fitur) --}}
-                <li class="nxl-item nxl-hasmenu">
-                    <a href="#" class="nxl-link">
-                        <span class="nxl-micon"><i class="feather-edit"></i></span>
-                        <span class="nxl-mtext">Nilai</span>
-                        <span class="nxl-arrow"><i class="feather-chevron-right"></i></span>
-                    </a>
-                    <ul class="nxl-submenu">
-                        <li class="nxl-item"><a href="#" class="nxl-link">Input Nilai</a></li>
-                        <li class="nxl-item"><a href="#" class="nxl-link">Rekap Nilai</a></li>
+                        <!-- ================= DATA MASTER ================= -->
+                        <li class="nxl-item nxl-caption">
+                            <label>Data Master</label>
+                        </li>
+
+                        <li class="nxl-item">
+                            <a href="siswa.html" class="nxl-link">
+                                <span class="nxl-micon"><i class="feather-users"></i></span>
+                                <span class="nxl-mtext">Siswa</span>
+                            </a>
+                        </li>
+
+                        <li class="nxl-item">
+                            <a href="guru.html" class="nxl-link">
+                                <span class="nxl-micon"><i class="feather-user"></i></span>
+                                <span class="nxl-mtext">Guru</span>
+                            </a>
+                        </li>
+
+                        <li class="nxl-item">
+                            <a href="kelas.html" class="nxl-link">
+                                <span class="nxl-micon"><i class="feather-grid"></i></span>
+                                <span class="nxl-mtext">Kelas</span>
+                            </a>
+                        </li>
+
+                        <li class="nxl-item">
+                            <a href="mapel.html" class="nxl-link">
+                                <span class="nxl-micon"><i class="feather-book"></i></span>
+                                <span class="nxl-mtext">Mata Pelajaran</span>
+                            </a>
+                        </li>
+
+                        <li class="nxl-item">
+                            <a href="tahun-ajaran.html" class="nxl-link">
+                                <span class="nxl-micon"><i class="feather-calendar"></i></span>
+                                <span class="nxl-mtext">Tahun Ajaran</span>
+                            </a>
+                        </li>
+
+                        <li class="nxl-item">
+                            <a href="semester.html" class="nxl-link">
+                                <span class="nxl-micon"><i class="feather-layers"></i></span>
+                                <span class="nxl-mtext">Semester</span>
+                            </a>
+                        </li>
+
+
+                        <!-- ================= AKADEMIK ================= -->
+                        <li class="nxl-item nxl-caption">
+                            <label>Akademik</label>
+                        </li>
+
+                        <li class="nxl-item">
+                            <a href="jadwal.html" class="nxl-link">
+                                <span class="nxl-micon"><i class="feather-clock"></i></span>
+                                <span class="nxl-mtext">Jadwal</span>
+                            </a>
+                        </li>
+
+                        <li class="nxl-item">
+                            <a href="absensi.html" class="nxl-link">
+                                <span class="nxl-micon"><i class="feather-check-square"></i></span>
+                                <span class="nxl-mtext">Absensi</span>
+                            </a>
+                        </li>
+
+                        <li class="nxl-item">
+                            <a href="nilai.html" class="nxl-link">
+                                <span class="nxl-micon"><i class="feather-edit"></i></span>
+                                <span class="nxl-mtext">Nilai</span>
+                            </a>
+                        </li>
+
+
+                        <!-- ================= SISTEM ================= -->
+                        <li class="nxl-item nxl-caption">
+                            <label>Sistem</label>
+                        </li>
+
+                        <li class="nxl-item">
+                            <a href="users.html" class="nxl-link">
+                                <span class="nxl-micon"><i class="feather-shield"></i></span>
+                                <span class="nxl-mtext">Manajemen User</span>
+                            </a>
+                        </li>
+
+                        <li class="nxl-item">
+                            <a href="settings.html" class="nxl-link">
+                                <span class="nxl-micon"><i class="feather-settings"></i></span>
+                                <span class="nxl-mtext">Pengaturan</span>
+                            </a>
+                        </li>
+
                     </ul>
-                </li>
+                </div>
+            </div>
+        </nav>
 
-                {{-- Jadwal --}}
-                <li class="nxl-item">
-                    <a href="#" class="nxl-link">
-                        <span class="nxl-micon"><i class="feather-calendar"></i></span>
-                        <span class="nxl-mtext">Jadwal</span>
-                    </a>
-                </li>
-
-            </ul>
-        </div>
     </div>
 </nav>

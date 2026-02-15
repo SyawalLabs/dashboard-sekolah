@@ -155,34 +155,6 @@
         </footer>
         <!-- [ Footer ] end -->
 
-        {{-- Script Grafik JS --}}
-        <script>
-            document.addEventListener("DOMContentLoaded", function() {
-
-                var options = {
-                    chart: {
-                        type: 'bar',
-                        height: 300
-                    },
-                    series: [{
-                        name: 'Jumlah',
-                        data: [25, 23, 20, 27]
-                    }],
-                    xaxis: {
-                        categories: ['7-A', '7-B', '7-C', '8-A']
-                    },
-                    colors: ['#0d6efd'],
-                    dataLabels: {
-                        enabled: false
-                    }
-                };
-
-                var chart = new ApexCharts(document.querySelector("#billable-time-bar-chart"), options);
-                chart.render();
-
-            });
-        </script>
-
 
     </main>
 
