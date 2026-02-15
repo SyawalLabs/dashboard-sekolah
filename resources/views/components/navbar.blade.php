@@ -10,7 +10,7 @@
             <div class="navbar-wrapper">
                 <div class="m-header">
                     <a href="dashboard.html" class="b-brand">
-                        <h3>SIM SMP</h3>
+                        <h3>MTsN Ngada</h3>
                     </a>
                 </div>
 
@@ -51,7 +51,7 @@
                         </li>
 
                         <li class="nxl-item">
-                            <a href="kelas.html" class="nxl-link">
+                            <a href="{{ route('kelas.index') }}" class="nxl-link">
                                 <span class="nxl-micon"><i class="feather-grid"></i></span>
                                 <span class="nxl-mtext">Kelas</span>
                             </a>

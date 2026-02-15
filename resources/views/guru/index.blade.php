@@ -20,7 +20,7 @@
                         <div class="card-body p-0">
                             <div class="table-responsive">
                                 <table class="table table-hover mb-0">
-                                    <thead class="table-light">
+                                    <thead>
                                         <tr>
                                             <th>No</th>
                                             <th>NIP</th>
@@ -81,6 +81,10 @@
                                     </tbody>
                                 </table>
                             </div>
+                        </div>
+                        {{-- Footer (Optional Pagination) --}}
+                        <div class="card-footer">
+                            {{-- {{ $siswa->links() }} --}}
                         </div>
                     </div>
                 </div>

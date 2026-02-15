@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\Models\Guru;
-// use Illuminate\Http\Request;
+use Illuminate\Http\Request;
 
 class GuruController extends Controller
 {
@@ -16,5 +16,10 @@ class GuruController extends Controller
     public function create()
     {
         // Tampilkan form untuk menambahkan guru baru
+        return view('guru.create');
+    }
+    public function store(Request $request)
+    {
+        // Validasi dan simpan data guru baru ke database
     }
 }

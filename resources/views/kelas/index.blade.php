@@ -1,6 +1,5 @@
 @extends('layouts.app')
-@section('title', 'Data Siswa')
-
+@section('title', 'Data Kelas')
 @section('content')
     <main class="nxl-container">
         <div class="nxl-content">
@@ -11,9 +10,9 @@
 
                         {{-- Header --}}
                         <div class="card-header d-flex justify-content-between align-items-center">
-                            <h5 class="card-title mb-0">Data Siswa</h5>
-                            <a href="{{ route('siswa.create') }}" class="btn btn-primary">
-                                <i class="bi bi-plus"></i> Tambah Siswa
+                            <h5 class="card-title mb-0">Data Kelas</h5>
+                            <a href="{{ route('kelas.create') }}" class="btn btn-primary">
+                                <i class="bi bi-plus"></i> Tambah Kelas
                             </a>
                         </div>
 
@@ -24,51 +23,36 @@
                                     <thead>
                                         <tr>
                                             <th>No</th>
-                                            <th>NIS</th>
-                                            <th>Nama</th>
-                                            <th>Kelas</th>
-                                            <th>Jenis Kelamin</th>
-                                            <th>Status</th>
+                                            <th>Nama Kelas</th>
+                                            <th>Wali Kelas</th>
+                                            <th>Jumlah Siswa</th>
                                             <th width="150">Aksi</th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        @forelse ($siswa as $index => $sis)
+                                        @forelse ($kelas as $index => $kl)
                                             <tr>
                                                 <td>{{ $index + 1 }}</td>
-                                                <td>{{ $sis->nis }}</td>
-                                                <td>{{ $sis->nama }}</td>
-                                                <td>{{ $sis->kelas->nama_kelas ?? '-' }}</td>
-                                                <td>
-                                                    {{ $sis->jenis_kelamin == 'L' ? 'Laki-laki' : 'Perempuan' }}
-                                                </td>
-                                                <td>
-                                                    @if ($sis->status == 'aktif')
-                                                        <span class="badge bg-success">Aktif</span>
-                                                    @elseif($sis->status == 'lulus')
-                                                        <span class="badge bg-primary">Lulus</span>
-                                                    @else
-                                                        <span class="badge bg-secondary">Nonaktif</span>
-                                                    @endif
-                                                </td>
+                                                <td>{{ $kl->nama_kelas }}</td>
+                                                <td>{{ $kl->wali_kelas }}</td>
+                                                <td>{{ $kl->jumlah_siswa }}</td>
                                                 <td>
                                                     <div class="d-flex gap-1">
 
                                                         {{-- Detail --}}
-                                                        <a href="{{ route('siswa.show', $sis->id) }}"
+                                                        <a href="{{ route('kelas.show', $kl->id) }}"
                                                             class="btn btn-sm btn-info" title="Detail">
                                                             <i class="fa fa-eye"></i>
                                                         </a>
 
                                                         {{-- Edit --}}
-                                                        <a href="{{ route('siswa.edit', $sis->id) }}"
+                                                        <a href="{{ route('kelas.edit', $kl->id) }}"
                                                             class="btn btn-sm btn-warning" title="Edit">
                                                             <i class="fa fa-edit"></i>
                                                         </a>
-
-                                                        {{-- Hapus --}}
-                                                        <form action="{{ route('siswa.destroy', $sis->id) }}" method="POST"
-                                                            onsubmit="return confirm('Yakin hapus siswa ini?')">
+                                                        {{-- Delete --}}
+                                                        <form action="{{ route('kelas.destroy', $kl->id) }}" method="POST"
+                                                            onsubmit="return confirm('Apakah Anda yakin ingin menghapus kelas ini?')">
                                                             @csrf
                                                             @method('DELETE')
                                                             <button type="submit" class="btn btn-sm btn-danger"
@@ -76,15 +60,12 @@
                                                                 <i class="fa fa-trash"></i>
                                                             </button>
                                                         </form>
-
                                                     </div>
                                                 </td>
                                             </tr>
                                         @empty
                                             <tr>
-                                                <td colspan="7" class="text-center text-muted py-4">
-                                                    Data siswa belum tersedia
-                                                </td>
+                                                <td colspan="5" class="text-center">Tidak ada data kelas.</td>
                                             </tr>
                                         @endforelse
                                     </tbody>
@@ -100,7 +81,7 @@
                     </div>
                 </div>
             </div>
-
         </div>
     </main>
+
 @endsection
