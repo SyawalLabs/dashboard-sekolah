@@ -23,11 +23,12 @@
                         </li>
 
                         <li class="nxl-item">
-                            <a href="dashboard.html" class="nxl-link">
+                            <a href="{{ route('dashboard') }}" class="nxl-link">
                                 <span class="nxl-micon"><i class="feather-home"></i></span>
                                 <span class="nxl-mtext">Dashboard Utama</span>
                             </a>
                         </li>
+
 
 
                         <!-- ================= DATA MASTER ================= -->
@@ -36,7 +37,7 @@
                         </li>
 
                         <li class="nxl-item">
-                            <a href="siswa.html" class="nxl-link">
+                            <a href="{{ route('siswa.index') }}" class="nxl-link">
                                 <span class="nxl-micon"><i class="feather-users"></i></span>
                                 <span class="nxl-mtext">Siswa</span>
                             </a>
