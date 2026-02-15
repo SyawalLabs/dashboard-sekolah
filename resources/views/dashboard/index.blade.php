@@ -13,7 +13,7 @@
                         <div class="hstack justify-content-between mb-4 pb-">
                             <div>
                                 <h2 class="mb-1">Dashboard {{ env('APP_NAME') }}</h2>
-                                <span class="fs-12 text-muted">Sistem Informasi Manajemen Kriminal</span>
+                                <span class="fs-12 text-muted">Sistem Informasi Manajemen Sekolah</span>
                             </div>
                         </div>
                         <div class="row">
@@ -87,7 +87,7 @@
             <div class="col-xxl-6">
                 <div class="card stretch stretch-full">
                     <div class="card-header">
-                        <h5 class="card-title">Billable Time</h5>
+                        <h5 class="card-title">Grafik Jumlah Siswa per Kelas</h5>
                         <div class="card-header-action">
                             <div class="card-header-btn">
                                 <div data-bs-toggle="tooltip" title="Delete">

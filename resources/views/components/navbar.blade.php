@@ -44,7 +44,7 @@
                         </li>
 
                         <li class="nxl-item">
-                            <a href="guru.html" class="nxl-link">
+                            <a href="{{ route('guru.index') }}" class="nxl-link">
                                 <span class="nxl-micon"><i class="feather-user"></i></span>
                                 <span class="nxl-mtext">Guru</span>
                             </a>

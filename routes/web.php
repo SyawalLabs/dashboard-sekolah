@@ -26,6 +26,16 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/siswa/{id}/edit', [SiswaController::class, 'edit'])->name('siswa.edit');
     Route::put('/siswa/{id}', [SiswaController::class, 'update'])->name('siswa.update');
     Route::delete('/siswa/{id}', [SiswaController::class, 'destroy'])->name('siswa.destroy');
-
 });
-require __DIR__.'/auth.php';
+
+Route::middleware(['auth'])->group(function () {
+    Route::get('/guru', [SiswaController::class, 'index'])->name('guru.index');
+    Route::get('/guru/show', [SiswaController::class, 'show'])->name('guru.show');
+    Route::get('/guru/create', [SiswaController::class, 'create'])->name('guru.create');
+    Route::post('/guru', [SiswaController::class, 'store'])->name('guru.store');
+    Route::get('/guru/{id}/edit', [SiswaController::class, 'edit'])->name('guru.edit');
+    Route::put('/guru/{id}', [SiswaController::class, 'update'])->name('guru.update');
+    Route::delete('/guru/{id}', [SiswaController::class, 'destroy'])->name('guru.destroy');
+});
+
+require __DIR__ . '/auth.php';
