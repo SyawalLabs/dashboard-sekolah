@@ -9,38 +9,16 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('siswa', function (Blueprint $table) {
-            $table->id(); // id auto increment
-
-            $table->integer('nis');
-            $table->integer('nisn');
-
-            $table->string('nama', 100);
-
-            $table->enum('jenis_kelamin', ['Laki-laki', 'Perempuan']);
-
-            $table->string('tempat_tanggal_lahir', 100);
-
-            $table->string('alamat', 100);
-
-            $table->enum('kelas', [
-                'Kelas 7-A',
-                'Kelas 7-B',
-                'Kelas 7-C',
-                'Kelas 8-A',
-                'Kelas 8-B',
-                'Kelas 8-C',
-                'Kelas 9-A',
-                'Kelas 9-B',
-                'Kelas 9-C'
-            ]);
-
-            $table->enum('status', [
-                'aktif',
-                'nonaktif',
-                'lulus'
-            ]);
-
-            $table->dateTime('created_at');
+            $table->id();
+            $table->string('nis');
+            $table->string('nisn');
+            $table->string('nama');
+            $table->string('jenis_kelamin');
+            $table->string('tempat_tanggal_lahir');
+            $table->text('alamat');
+            $table->string('kelas');
+            $table->string('status');
+            $table->timestamps(); // ← TAMBAHKAN INI
         });
     }
 
